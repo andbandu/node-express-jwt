@@ -10,9 +10,9 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb+srv://shaun:test1234@cluster0.del96.mongodb.net/node-auth';
+const dbURI = 'mongodb+srv://andbandu:Menu17322@nodetutes.ojmhr.mongodb.net/node-auth?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(3000,()=>console.log("app start on server 3000")))
   .catch((err) => console.log(err));
 
 // routes
